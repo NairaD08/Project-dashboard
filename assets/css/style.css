@@ -1,5 +1,5 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 16px;
 }
 
@@ -13,4 +13,24 @@ body {
 
 .task-card:hover {
   cursor: grab;
+  background-color: #a09090;
+}
+
+.task-card {
+  width: 180px;
+  padding: 10px;
+  height: 150px;
+  background-color: rgb(58, 197, 76);
+  border: 1px solid darkgreen;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px whitesmoke;
+  margin-top: 10px;
+  cursor: move;
+  transition: background-color 0.3s;
+  position: relative; /* Ensure position is relative for z-index to work */
+  z-index: 1; /* Default z-index */
+}
+.task-card.dragging {
+  z-index: 1000; /* Higher z-index when dragging */
+  opacity: 0.7; /* Optional: make it slightly transparent */
 }
