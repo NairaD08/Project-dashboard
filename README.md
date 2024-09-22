@@ -16,3 +16,5 @@ As a project team member with multiple tasks to organize, I want a task board so
 - **Persistent Storage**: All task details are saved in localStorage, ensuring that your tasks persist even after refreshing the page.
 - **Drag-and-Drop Functionality**: Move tasks between progress columns with ease, with updates saved automatically.
 - **Task Deletion**: Remove tasks from the board permanently with a simple click.
+
+- ![image alt](https://github.com/NairaD08/Project-dashboard/blob/a3f548fb0f63ad1449b30e1fa868bf455faefaf8/Task%20Board.png)
