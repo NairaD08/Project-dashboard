@@ -42,7 +42,7 @@ function renderTaskList() {
   $("#in-progress-cards").empty();
   $("#done-cards").empty();
   // Retrieve the updated task list from local storage
- 
+
   const taskList = JSON.parse(localStorage.getItem("taskList")) || [];
   for (let i = 0; i < taskList.length; i++) {
     const taskCard = createTaskCard(taskList[i]);
@@ -75,9 +75,9 @@ function renderTaskList() {
 // Todo: create a function to handle adding a new task
 function handleAddTask(event) {
   event.preventDefault(); // prevents refresh of the page
-  const taskTitle = $("#taskTitle").val(); //value
-  const taskDueDate = $("#taskDueDate").val();
-  const taskDiscription = $("#taskDiscription").val();
+  const taskTitle = $("#taskTitle").val(""); //value
+  const taskDueDate = $("#taskDueDate").val("");
+  const taskDiscription = $("#taskDiscription").val("");
 
   const newTaskId = generateTaskId(); // Use the generateTaskId function
   const newTask = {
@@ -115,7 +115,6 @@ function handleDrop(taskId, newStatus) {
     renderTaskList(); // Re-render the task list to reflect changes
   }
 }
-
 
 // Todo: when the page loads, render the task list, add event listeners, make lanes droppable, and make the due date field a date picker
 $(document).ready(function () {
