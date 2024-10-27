@@ -46,13 +46,19 @@ function renderTaskList() {
   const taskList = JSON.parse(localStorage.getItem("taskList")) || [];
   for (let i = 0; i < taskList.length; i++) {
     const taskCard = createTaskCard(taskList[i]);
-    if (taskList[i].status === "To Do") {
+    if (taskList[i].status === "to-do") {
+      taskCard.addClass("todo-card");
+      taskCard.removeClass("inprogress-card done-card");
       $("#todo-cards").append(taskCard);
     }
     if (taskList[i].status === "done") {
+      taskCard.addClass("done-card");
+      taskCard.removeClass("inprogress-card todo-card");
       $("#done-cards").append(taskCard);
     }
     if (taskList[i].status === "in-progress") {
+      taskCard.addClass("inprogress-card");
+      taskCard.removeClass("todo-card done-card");
       $("#in-progress-cards").append(taskCard);
     }
   }
