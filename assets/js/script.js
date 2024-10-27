@@ -92,6 +92,9 @@ function handleAddTask(event) {
   const taskTitle = $("#taskTitle").val(); //value
   const taskDueDate = $("#taskDueDate").val();
   const taskDiscription = $("#taskDiscription").val();
+  console.log("Task Title:", taskTitle);
+  console.log("Task Due Date:", taskDueDate);
+  console.log("Task Description:", taskDiscription);
 
   const newTaskId = generateTaskId(); // Use the generateTaskId function
   const newTask = {
@@ -99,7 +102,7 @@ function handleAddTask(event) {
     taskTitle,
     taskDueDate,
     taskDiscription,
-    status: "To Do",
+    status: "to-do",
   };
   const taskList = JSON.parse(localStorage.getItem("taskList")) || []; // ||empty array retrieve the list
   taskList.push(newTask); // updating the list with the new task in javascript
